@@ -1,0 +1,27 @@
+.main_heading{
+  position: center;
+  text-align: center;
+  background-color: #333;
+  color: #ffffff;
+
+}
+
+.chart-container{
+    position: center;
+    height: 450px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto
+
+}
+
+.table{
+    position: center;
+    color: #0a0a0a;
+    height: 300px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto
+
+  
+}

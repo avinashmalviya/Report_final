@@ -1,0 +1,40 @@
+<!-- <div class="row">
+    <div class="col-lg-6">
+        <h2>Chart </h2>
+        <canvas id="barchart"></canvas>
+
+    </div>
+
+</div>
+
+ -->
+
+ 
+<div class="main_heading">
+ <h1> Vendor Name Vs Total Resources </h1>
+</div>
+
+ <div class="chart-container" >
+    <canvas  id="MyChart" >{{ chart }}</canvas>
+</div>
+
+
+
+<div class="table">
+<ngb-accordion [closeOthers]="true" activeIds="static-1">
+	<ngb-panel id="static-1" title="Data">
+		<ng-template ngbPanelContent>
+                <table>
+                  <tr>
+                    <th>Vendor Name</th>
+                    <th>Total Resources</th>
+                  </tr>
+                <tr *ngFor="let user of label_data">
+                    <td>{{user.vendorName}}</td>
+                    <td>{{user.totalResources}}</td>
+                </table>
+		</ng-template>
+	</ngb-panel>
+</ngb-accordion>
+</div>
+

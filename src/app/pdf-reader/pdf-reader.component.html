@@ -1,0 +1,143 @@
+
+<meta charset="utf-g">
+<meta name="stylesheet" content="width=device=width, initial=scale=1">
+
+<div class="main">
+
+<div class="date" >
+    <!-- <p>Generated On :- 4-Feb-2013 || 13.38 IST</p> -->
+    <p>Generated On :- {{jstoday}} IST </p>
+</div>
+
+<div class="logo">
+    <img src="https://plexushr.com/wp-content/uploads/2022/10/plexus_logo_dark_C.png" alt="PlexusHr_Logo">
+</div>
+<div class="header">
+    <h1>HIRING REPORT</h1>
+</div>
+
+
+<div>
+<table class="rwd-table">
+    <tr>
+      <th >No. Of Active Position</th>
+      <th>No. Of Resumes Supplied</th>
+    </tr>
+    <tr>
+    <!-- <tr *ngFor="let user of activePositionCount"> -->
+      <!-- <td>{{user}}</td> -->
+      <td>83</td>
+    </tr>
+  </table>
+</div>
+
+<div class="heading">
+<h5>Overall Candidate Status</h5>
+</div>
+    
+<div>
+<table class="rwd-table">
+    <tr>
+        <th>Recommended</th>
+        <th>Screen Selected</th>
+        <th>In Evaluation</th>
+        <th>Screen Rejected</th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <td>88</td>
+        <td>6</td>
+        <td>3</td>
+        <td>15</td>
+        <td>112</td>
+      
+    </tr>
+</table>
+</div>
+    
+
+<div class="heading">
+    <h5>Position Level  Candidate Status</h5>
+</div>
+    
+<div  >
+    
+<table class="rwd-table">
+    <tr>
+        <th>ID</th>
+        <th>JD Title</th>
+        <th *ngFor="let header of headingForCandidateStatusPositionLevel">
+            {{header}}
+        </th> 
+    </tr>
+    <tr *ngFor="let position of candidateStatusPostionLevel">
+        <td>{{position.did}}</td>
+        <td>{{position.jdTitle}}</td>
+        <td *ngFor="let td1 of position.data">
+            {{getCount(td1)}}
+        </td> 
+    </tr>
+</table>
+</div> 
+
+
+<div class="heading">
+    <h5>Vendor Performance (Overall)</h5>
+</div>
+    
+<div >
+    
+    <!-- <table class="rwd-table" *ngIf="response.data.vendorPerformancePostionLevel.vendorData"> -->
+        <table class="rwd-table">
+        <tr>
+            <th>Vendor</th>
+            <th *ngFor="let header of headingForCandidateStatusPositionLevel">
+                {{header}}
+            </th> 
+        </tr>
+        <tr *ngFor="let position of vendorPerformanceOrgLevel">
+            <td>{{position.legalName}}</td>
+            <td *ngFor="let td1 of position.data">
+                {{getCount(td1)}}
+            </td> 
+        </tr>
+    </table>
+ </div>
+ 
+
+<div class="heading">
+  <div *ngFor="let main_head of vendorPerformancePostionLevel">
+        <h5>Vendor Performance Position</h5>
+        ({{main_head.jdTitle}} # {{main_head.did}})
+        <div >
+            <table class="rwd-table" >
+                <tr>
+                    <th>Vendor</th>
+                    <th *ngFor="let header of headingForCandidateStatusPositionLevel">
+                        {{header}}
+                    </th> 
+                </tr>
+                <tr *ngFor="let vend_data of main_head.vendorData">
+                    <td >
+                        {{vend_data.legalName}}
+                    </td>
+                    <td *ngFor="let td1 of vend_data.data">
+                        {{getCount(td1)}}
+                    </td> 
+                </tr>
+
+            </table>
+         </div>
+    </div> 
+</div>
+    
+
+<div>
+<h5 class="footer">
+    Unique Marketplace for Resource Suppliers and Seekers
+</h5>
+</div>
+
+
+</div>
+
